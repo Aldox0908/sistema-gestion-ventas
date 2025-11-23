@@ -1,0 +1,16 @@
+<div class="container mt-4">
+  <h2>🛒 Carrito de compras</h2>
+
+  <div *ngIf="carrito.length === 0">
+    <p>El carrito está vacío.</p>
+  </div>
+
+  <div *ngFor="let item of carrito" class="card p-3 mt-2 shadow-sm">
+    <h5>{{item.nombre}}</h5>
+    <p>Precio: S/ {{item.precio}}</p>
+  </div>
+
+  <div *ngIf="carrito.length > 0" class="mt-3">
+    <h4>Total: S/ {{ total() }}</h4>
+  </div>
+</div>
